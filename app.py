@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    num_clicks = 1
-    return render_template('home.html', variable = num_clicks)    
+    return render_template('home.html')    
 
 app.run()
