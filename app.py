@@ -1,9 +1,10 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    num_clicks = 1
+    return render_template('home.html', variable = num_clicks)    
 
 app.run()

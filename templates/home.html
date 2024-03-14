@@ -1,1 +1,11 @@
 <h1>Welcome to Cookie Clicker</h1>
+
+<script>
+    let i = 0;
+    function increment() {
+        i++;
+        document.getElementById('numClicks').value = i;
+    }
+</script>
+<button onclick="increment()">Shitty Cookie</button>
+<input type="text" id="numClicks" value="0"></input>
