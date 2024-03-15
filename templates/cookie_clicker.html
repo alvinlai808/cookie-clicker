@@ -1,12 +1,17 @@
 <h1>Welcome to Cookie Clicker</h1>
 
+<h2>Signed in as {{username}}</h2>
+
 <script>
-    let i = 0;
-    function increment() {
-        i++;
-        document.getElementById('numClicks').value = i;
+    let numClicks = 0;
+    function clickCounter() {
+        numClicks++;
+        document.getElementById('numClicks').value = numClicks;
     }
 </script>
 
-<button onclick="increment()">Shitty Cookie</button>
+<button onclick="clickCounter()">Shitty Cookie</button>
 <input type="text" id="numClicks" value="0"></input>
+<br>
+<br>
+<input type="submit" value="Sign Out">

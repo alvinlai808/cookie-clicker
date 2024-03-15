@@ -10,8 +10,8 @@ def login():
 
 
 @app.route('/cookie_clicker', methods = ['POST'])
-def cookie_time():
-    return render_template('cookie_clicker.html')
+def cookie_clicker():
+    return render_template('cookie_clicker.html', username=request.form['username'])
 
 
-app.run()
+app.run(debug = True, host="localhost", port="8080")
