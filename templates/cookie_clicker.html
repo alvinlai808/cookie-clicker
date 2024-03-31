@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{username}}'s Cookies</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css') }}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{username}}'s Cookies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css') }}">
+</head>
 
-    <body>
-        <h1>Hello, {{username}}</h1>
-        <h3>You have {{clicks}} cookies!</h3>
-
-        <form action="update-click" method="post">
-            <input type="hidden" name="username" value="{{username}}">
-            <input type="submit" value="Click Cookie">
-        </form>
-        <p><a href="/">Sign Out</a></p>
-    </body>
+<body>
+    <div class="container">
+        <div class="box-1">
+            <h1>Hello, {{username}}</h1>
+            <h3>You have {{clicks}} cookies!</h3>
+    
+            <form action="update-click" method="post">
+                <input type="hidden" name="username" value="{{username}}">
+                <input type="submit" value="Click Cookie">
+            </form>
+            <p><a href="/">Sign Out</a></p>    
+        </div>
+    </div>
+    
+</body>
 
 </html>

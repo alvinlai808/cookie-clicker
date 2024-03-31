@@ -1,23 +1,30 @@
-body{
-    background-color:lightcoral;
+.container{
+    width: 80%;
+    margin: auto;
 }
 
-h1{
-    background-color: green;
+.box-1{
+    background-color: #ddb892;
 }
 
-form{
-    background-color: aqua;
+.box-1 h1{
+    padding-top: 20px;
+    font-family: Tahoma;
+    text-align: center;
+    color: #7f5539;
 }
 
-input[type=text] {
-    background-color:plum;
+.box-1 h3{
+    font-family: Tahoma;
+    text-align: center;
+    color: #7f5539;
 }
 
-input[type=submit] {
-    background-color: white;
+.box-1 form{
+    padding: 20px;
+    text-align: center;
 }
 
-p{
-    background-color: white;
+.box-1 p{
+    text-align: center;
 }
