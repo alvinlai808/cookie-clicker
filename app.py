@@ -12,11 +12,6 @@ def login():
 
 @app.route('/cookie_clicker', methods = ['POST'])
 def cookie_clicker():
-    '''
-    - After signing in, the count should resume from where the user left off
-        - retrieve the user's last known count and display it
-    - Every click sends a POST request to increment the particular user's count
-    '''
     users = {}
 
     if os.path.exists('users.json'):
@@ -29,7 +24,12 @@ def cookie_clicker():
     with open('users.json', 'w') as user_file:
         json.dump(users, user_file)
 
-    return render_template('cookie_clicker.html', username=request.form['username'])
+    return render_template(
+        'cookie_clicker.html', 
+        username=request.form['username'], 
+        clicks=users[request.form['username']]
+    )
+
 
 @app.route('/update-click', methods = ['POST'])
 def update_click():
@@ -41,6 +41,12 @@ def update_click():
 
     with open('users.json', 'w') as user_file:
         json.dump(users, user_file)
-    return render_template('cookie_clicker.html', username=request.form['username'], clicks=users[request.form['username']])
+    return render_template(
+        'cookie_clicker.html', 
+        username=request.form['username'], 
+        clicks=users[request.form['username']]
+    )
+
+
 
 app.run(debug = True, host="localhost", port="8080")

@@ -1,0 +1,23 @@
+body{
+    background-color:lightcoral;
+}
+
+h1{
+    background-color: green;
+}
+
+form{
+    background-color: aqua;
+}
+
+input[type=text] {
+    background-color:plum;
+}
+
+input[type=submit] {
+    background-color: white;
+}
+
+p{
+    background-color: white;
+}
