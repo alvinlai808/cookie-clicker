@@ -28,3 +28,17 @@
 .box-1 p{
     text-align: center;
 }
+
+input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 12%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

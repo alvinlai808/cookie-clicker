@@ -47,6 +47,21 @@ def update_click():
         clicks=users[request.form['username']]
     )
 
+@app.route('/reset-cookies', methods = ['POST'])
+def reset_cookies():
+    if os.path.exists('users.json'):
+        with open('users.json') as users_file:
+            users = json.load(users_file)
 
+    users[request.form['username']] = 0
+
+    with open('users.json', 'w') as user_file:
+        json.dump(users, user_file)
+    return render_template(
+        'cookie_clicker.html', 
+        username=request.form['username'], 
+        clicks=users[request.form['username']],
+        reset=': Cookies have been reset'
+    )
 
 app.run(debug = True, host="localhost", port="8080")

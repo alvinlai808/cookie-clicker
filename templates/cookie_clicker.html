@@ -10,12 +10,17 @@
 <body>
     <div class="container">
         <div class="box-1">
-            <h1>Hello, {{username}}</h1>
+            <h1>Hello, {{username}}{{reset}}</h1>
             <h3>You have {{clicks}} cookies!</h3>
     
             <form action="update-click" method="post">
                 <input type="hidden" name="username" value="{{username}}">
                 <input type="submit" value="Click Cookie">
+            </form>
+
+            <form action="reset-cookies" method="post">
+                <input type="hidden" name="username" value="{{username}}">
+                <input type="submit" value="Reset Cookies">
             </form>
             <p><a href="/">Sign Out</a></p>    
         </div>
