@@ -47,6 +47,7 @@ def update_click():
         clicks=users[request.form['username']]
     )
 
+
 @app.route('/reset-cookies', methods = ['POST'])
 def reset_cookies():
     if os.path.exists('users.json'):
@@ -63,5 +64,6 @@ def reset_cookies():
         clicks=users[request.form['username']],
         reset=': Cookies have been reset'
     )
+
 
 app.run(debug = True, host="localhost", port="8080")
